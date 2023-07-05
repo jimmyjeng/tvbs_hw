@@ -1,0 +1,19 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '13.0'
+
+target 'tvbs_hw' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for tvbs_hw
+
+  target 'tvbs_hwTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'tvbs_hwUITests' do
+    # Pods for testing
+  end
+
+end
