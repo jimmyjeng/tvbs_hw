@@ -15,6 +15,9 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bbw-aT-rTD">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="PAP-ah-SQn">
                     <rect key="frame" x="333" y="567.66666666666663" width="40" height="200.33333333333337"/>
                     <subviews>
@@ -52,29 +55,26 @@
                         </button>
                     </subviews>
                 </stackView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bbw-aT-rTD">
-                    <rect key="frame" x="171.66666666666666" y="401" width="50" height="50"/>
-                    <color key="backgroundColor" systemColor="systemYellowColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="4XF-Mh-wmS"/>
-                        <constraint firstAttribute="width" constant="50" id="Ur9-9H-eLa"/>
-                    </constraints>
-                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="Bbw-aT-rTD" secondAttribute="bottom" id="64W-ME-TM3"/>
+                <constraint firstItem="Bbw-aT-rTD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="9mJ-AD-Qcc"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="PAP-ah-SQn" secondAttribute="trailing" constant="20" id="KOy-0o-9q0"/>
                 <constraint firstItem="Bbw-aT-rTD" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="P18-dJ-Zmn"/>
+                <constraint firstItem="Bbw-aT-rTD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VRg-0l-o3Z"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="PAP-ah-SQn" secondAttribute="bottom" constant="50" id="VzA-nM-1y6"/>
                 <constraint firstItem="Bbw-aT-rTD" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hql-dj-ZhT"/>
+                <constraint firstItem="Bbw-aT-rTD" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="wZt-HX-COc"/>
             </constraints>
             <connections>
                 <outlet property="disLikeButton" destination="IRf-L8-T2u" id="vo6-7X-roO"/>
                 <outlet property="likeButton" destination="NPy-bW-wdi" id="KD3-Fk-cqa"/>
                 <outlet property="titleLabel" destination="yRO-Rr-WeQ" id="flD-7R-A3K"/>
+                <outlet property="videoView" destination="Bbw-aT-rTD" id="Ob2-aS-rXA"/>
             </connections>
-            <point key="canvasLocation" x="138" y="20"/>
+            <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
@@ -87,9 +87,6 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
