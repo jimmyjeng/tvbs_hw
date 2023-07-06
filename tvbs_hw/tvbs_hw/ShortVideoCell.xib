@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="ShortVideoCell" id="iN0-l3-epB" customClass="ShortVideoCell" customModule="tvbs_hw" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="PAP-ah-SQn">
+                    <rect key="frame" x="333" y="567.66666666666663" width="40" height="200.33333333333337"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRO-Rr-WeQ">
+                            <rect key="frame" x="0.0" y="0.0" width="10.333333333333334" height="20.333333333333332"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" systemColor="systemRedColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPy-bW-wdi">
+                            <rect key="frame" x="0.0" y="70.333333333333371" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Olv-RE-NB5"/>
+                                <constraint firstAttribute="width" constant="40" id="o9A-dI-kIh"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Button" image="like_normal"/>
+                            <state key="selected" image="like_selected"/>
+                            <connections>
+                                <action selector="onClickLike:" destination="iN0-l3-epB" eventType="touchUpInside" id="13W-6A-ZcG"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRf-L8-T2u">
+                            <rect key="frame" x="0.0" y="160.33333333333337" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="ySE-hk-kpn"/>
+                                <constraint firstAttribute="height" constant="40" id="zvk-va-Xbk"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Button" image="dislike_normal"/>
+                            <state key="selected" image="dislike_selected"/>
+                            <connections>
+                                <action selector="onClickDisLike:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ssd-Xt-shp"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bbw-aT-rTD">
+                    <rect key="frame" x="171.66666666666666" y="401" width="50" height="50"/>
+                    <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="4XF-Mh-wmS"/>
+                        <constraint firstAttribute="width" constant="50" id="Ur9-9H-eLa"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="PAP-ah-SQn" secondAttribute="trailing" constant="20" id="KOy-0o-9q0"/>
+                <constraint firstItem="Bbw-aT-rTD" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="P18-dJ-Zmn"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="PAP-ah-SQn" secondAttribute="bottom" constant="50" id="VzA-nM-1y6"/>
+                <constraint firstItem="Bbw-aT-rTD" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hql-dj-ZhT"/>
+            </constraints>
+            <connections>
+                <outlet property="disLikeButton" destination="IRf-L8-T2u" id="vo6-7X-roO"/>
+                <outlet property="likeButton" destination="NPy-bW-wdi" id="KD3-Fk-cqa"/>
+                <outlet property="titleLabel" destination="yRO-Rr-WeQ" id="flD-7R-A3K"/>
+            </connections>
+            <point key="canvasLocation" x="138" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="dislike_normal" width="512" height="512"/>
+        <image name="dislike_selected" width="512" height="512"/>
+        <image name="like_normal" width="512" height="512"/>
+        <image name="like_selected" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
