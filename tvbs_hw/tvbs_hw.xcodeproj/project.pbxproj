@@ -30,6 +30,7 @@
 		BF1C3D8D2A57A27E00432946 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1C3D8C2A57A27D00432946 /* DataManager.swift */; };
 		BF1C3D8F2A57A38000432946 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = BF1C3D8E2A57A38000432946 /* Data.json */; };
 		BF1C3D932A57AA1B00432946 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1C3D922A57AA1B00432946 /* ViewModel.swift */; };
+		BF1C3D962A57E7F300432946 /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1C3D952A57E7F300432946 /* ViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		BF1C3D8C2A57A27D00432946 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		BF1C3D8E2A57A38000432946 /* Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
 		BF1C3D922A57AA1B00432946 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		BF1C3D952A57E7F300432946 /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTests.swift; sourceTree = "<group>"; };
 		D75B9DFF62F39C113159C10A /* Pods_tvbs_hw_tvbs_hwUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tvbs_hw_tvbs_hwUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				BF1C3D562A5564AE00432946 /* tvbs_hwTests.swift */,
+				BF1C3D952A57E7F300432946 /* ViewModelTests.swift */,
 			);
 			path = tvbs_hwTests;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF1C3D962A57E7F300432946 /* ViewModelTests.swift in Sources */,
 				BF1C3D572A5564AE00432946 /* tvbs_hwTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

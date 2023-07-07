@@ -92,17 +92,6 @@ class ShortVideoCell: UICollectionViewCell {
     @IBAction func onClickLike(_ sender: Any) {
         if let action = likeAction
         {
-            // local change first, then send api
-            if (data.isLike) {
-                data.isLike = false
-                data.likeCount -= 1
-                updateUI()
-            } else {
-                data.isLike = true
-                data.likeCount += 1
-                updateUI()
-            }
-
             action()
         }
     }
@@ -110,14 +99,6 @@ class ShortVideoCell: UICollectionViewCell {
     @IBAction func onClickDisLike(_ sender: Any) {
         if let action = dislikeAction
         {
-            // local change first, then send api
-            if (data.isDislike) {
-                data.isDislike = false
-                updateUI()
-            } else {
-                data.isDislike = true
-                updateUI()
-            }
             action()
         }
     }

@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct ResponseData: Decodable {
+class ResponseData: Decodable {
     var datas: [VideoModel]
 }
 
-struct VideoModel: Codable {
+class VideoModel: Codable {
     var url: String
     var likeCount: Int
     var isLike: Bool

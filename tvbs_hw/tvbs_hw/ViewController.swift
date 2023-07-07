@@ -70,11 +70,13 @@ extension ViewController: UICollectionViewDataSource {
         cell.likeAction = { [weak self] in
             guard let self = self else { return }
             viewModel.changeLike(index: indexPath.row)
+            cell.updateUI()
         }
         
         cell.dislikeAction = { [weak self] in
             guard let self = self else { return }
             viewModel.changeDislike(index: indexPath.row)
+            cell.updateUI()
         }
         
         return cell

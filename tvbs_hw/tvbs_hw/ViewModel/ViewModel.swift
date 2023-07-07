@@ -29,7 +29,7 @@ class ViewModel {
     
     func getData(index: Int) -> VideoModel? {
         
-        if index <= videoDatas.count {
+        if index >= 0 && index < videoDatas.count {
             return videoDatas[index]
         } else {
             return nil
@@ -38,7 +38,7 @@ class ViewModel {
     
     func changeLike (index: Int) {
         if index <= videoDatas.count {
-            var data = videoDatas[index]
+            let data = videoDatas[index]
             if (data.isLike) {
                 data.isLike = false
                 data.likeCount -= 1
@@ -52,9 +52,9 @@ class ViewModel {
     
     func changeDislike (index: Int) {
         if index <= videoDatas.count {
-            var data = videoDatas[index]
+            let data = videoDatas[index]
             if (data.isDislike) {
-                data.isLike = false
+                data.isDislike = false
             } else {
                 data.isDislike = true
             }
