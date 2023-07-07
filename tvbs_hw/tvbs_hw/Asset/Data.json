@@ -1,0 +1,34 @@
+{
+    "datas": [
+        {
+            "url": "00.mp4",
+            "likeCount": 15,
+            "isLike": false,
+            "isDislike": false
+        },
+        {
+            "url": "01.mp4",
+            "likeCount": 600,
+            "isLike": false,
+            "isDislike": true
+        },
+        {
+            "url": "02.mp4",
+            "likeCount": 777,
+            "isLike": true,
+            "isDislike": false
+        },
+        {
+            "url": "03.mp4",
+            "likeCount": 888,
+            "isLike": true,
+            "isDislike": false
+        },
+        {
+            "url": "04.mp4",
+            "likeCount": 6,
+            "isLike": false,
+            "isDislike": false
+        }
+    ]
+}

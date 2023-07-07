@@ -46,9 +46,9 @@
                                 <rect key="frame" x="0.0" y="788" width="393" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wcc-VN-Io7">
-                                        <rect key="frame" x="159" y="14.666666666666629" width="75" height="35"/>
+                                        <rect key="frame" x="166" y="14.666666666666629" width="61.333333333333343" height="35"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Start"/>
                                         <connections>
                                             <action selector="onClickTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eeJ-R5-zgG"/>
                                         </connections>

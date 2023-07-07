@@ -19,29 +19,39 @@
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="PAP-ah-SQn">
-                    <rect key="frame" x="333" y="567.66666666666663" width="40" height="200.33333333333337"/>
+                    <rect key="frame" x="333" y="608" width="40" height="160"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRO-Rr-WeQ">
-                            <rect key="frame" x="0.0" y="0.0" width="10.333333333333334" height="20.333333333333332"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" systemColor="systemRedColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPy-bW-wdi">
-                            <rect key="frame" x="0.0" y="70.333333333333371" width="40" height="40"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="40" id="Olv-RE-NB5"/>
-                                <constraint firstAttribute="width" constant="40" id="o9A-dI-kIh"/>
-                            </constraints>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" title="Button" image="like_normal"/>
-                            <state key="selected" image="like_selected"/>
-                            <connections>
-                                <action selector="onClickLike:" destination="iN0-l3-epB" eventType="touchUpInside" id="13W-6A-ZcG"/>
-                            </connections>
-                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NLf-gH-1zv">
+                            <rect key="frame" x="0.0" y="0.0" width="40" height="70"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPy-bW-wdi">
+                                    <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="Olv-RE-NB5"/>
+                                        <constraint firstAttribute="width" constant="40" id="o9A-dI-kIh"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="like_normal"/>
+                                    <state key="selected" image="like_selected"/>
+                                    <connections>
+                                        <action selector="onClickLike:" destination="iN0-l3-epB" eventType="touchUpInside" id="13W-6A-ZcG"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haS-DO-O81">
+                                    <rect key="frame" x="0.0" y="45" width="40" height="25"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="25" id="79B-x9-zLj"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRf-L8-T2u">
-                            <rect key="frame" x="0.0" y="160.33333333333337" width="40" height="40"/>
+                            <rect key="frame" x="0.0" y="120" width="40" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="40" id="ySE-hk-kpn"/>
                                 <constraint firstAttribute="height" constant="40" id="zvk-va-Xbk"/>
@@ -71,7 +81,7 @@
             <connections>
                 <outlet property="disLikeButton" destination="IRf-L8-T2u" id="vo6-7X-roO"/>
                 <outlet property="likeButton" destination="NPy-bW-wdi" id="KD3-Fk-cqa"/>
-                <outlet property="titleLabel" destination="yRO-Rr-WeQ" id="flD-7R-A3K"/>
+                <outlet property="likeCountLabel" destination="haS-DO-O81" id="BGN-bq-pUQ"/>
                 <outlet property="videoView" destination="Bbw-aT-rTD" id="Ob2-aS-rXA"/>
             </connections>
             <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
@@ -84,9 +94,6 @@
         <image name="like_selected" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
