@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,8 +17,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bbw-aT-rTD">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                 </view>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="PAP-ah-SQn">
-                    <rect key="frame" x="333" y="608" width="40" height="160"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="PAP-ah-SQn">
+                    <rect key="frame" x="333" y="578" width="40" height="140"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NLf-gH-1zv">
                             <rect key="frame" x="0.0" y="0.0" width="40" height="70"/>
@@ -51,7 +50,7 @@
                             </subviews>
                         </stackView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRf-L8-T2u">
-                            <rect key="frame" x="0.0" y="120" width="40" height="40"/>
+                            <rect key="frame" x="0.0" y="100" width="40" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="40" id="ySE-hk-kpn"/>
                                 <constraint firstAttribute="height" constant="40" id="zvk-va-Xbk"/>
@@ -74,7 +73,6 @@
                 </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="Bbw-aT-rTD" secondAttribute="bottom" id="64W-ME-TM3"/>
                 <constraint firstItem="Tnc-Xw-1eq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="7K2-6b-ARd"/>
@@ -82,7 +80,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="PAP-ah-SQn" secondAttribute="trailing" constant="20" id="KOy-0o-9q0"/>
                 <constraint firstItem="Bbw-aT-rTD" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="P18-dJ-Zmn"/>
                 <constraint firstItem="Bbw-aT-rTD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VRg-0l-o3Z"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="PAP-ah-SQn" secondAttribute="bottom" constant="50" id="VzA-nM-1y6"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="PAP-ah-SQn" secondAttribute="bottom" constant="100" id="VzA-nM-1y6"/>
                 <constraint firstItem="Tnc-Xw-1eq" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="YU8-np-flE"/>
                 <constraint firstItem="Bbw-aT-rTD" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hql-dj-ZhT"/>
                 <constraint firstItem="Bbw-aT-rTD" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="wZt-HX-COc"/>
@@ -102,8 +100,5 @@
         <image name="dislike_selected" width="512" height="512"/>
         <image name="like_normal" width="512" height="512"/>
         <image name="like_selected" width="512" height="512"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

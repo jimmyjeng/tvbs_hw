@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         shortVideoCollectionView.register(UINib(nibName: "ShortVideoCell", bundle: nil), forCellWithReuseIdentifier: "ShortVideoCell")
+        
         viewModel.loadingDelegate = self
         viewModel.loadData()
     }
@@ -36,9 +37,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onClickTest(_ sender: Any) {
-        if let data = viewModel.getData(index: 0) {
-            print(data)
-        }
+        // Test Button
     }
     
 }
@@ -50,7 +49,6 @@ extension ViewController: LoadingDelegate {
     
     func loadingFail(code: Int, message: String) {
         // TODO: show alert
-
     }
 }
 
@@ -89,6 +87,7 @@ extension ViewController: UICollectionViewDelegate {
         guard let cell = cell as? ShortVideoCell else {
             return
         }
+        
         cell.playVideo()
         
         if (viewModel.isLastData(index: indexPath.row)) {
