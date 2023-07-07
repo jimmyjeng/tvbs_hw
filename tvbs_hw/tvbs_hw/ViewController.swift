@@ -24,35 +24,6 @@ class ViewController: UIViewController {
         viewModel.loadData()
     }
     
-    
-    func playVideo(cell:UICollectionViewCell, row:Int) {
-        
-        guard let cell = cell as? ShortVideoCell else {
-            return
-        }
-        
-//        if let url = URL(string: "https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview118/v4/69/0e/98/690e98db-440d-cb0c-2bff-91b00a05bdda/mzaf_1674062311671795807.plus.aac.p.m4a") {
-//           let player = AVQueuePlayer()
-//           let item = AVPlayerItem(url: url)
-//           looper = AVPlayerLooper(player: player, templateItem: item)
-//           player.play()
-//        }
-        
-        if let data = viewModel.getData(index: row) {
-            let videoPath = Bundle.main.path(forResource: data.url, ofType: "")!
-            let videoURL = URL(fileURLWithPath: videoPath)
-            let player = AVPlayer(url: videoURL)
-            let playerLayer = AVPlayerLayer(player: player)
-            
-            playerLayer.frame = cell.bounds
-            playerLayer.name = "Video"
-            cell.videoView.layer.addSublayer(playerLayer)
-            player.play()
-            // TODO: prepeat video
-            
-        }
-    }
-    
     func removeVideo(cell:UICollectionViewCell,row:Int) {
         guard let cell = cell as? ShortVideoCell, let layers = cell.videoView.layer.sublayers else {
             return
@@ -92,10 +63,10 @@ extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShortVideoCell", for: indexPath) as! ShortVideoCell
         
+        cell.reset()
+
         if let data = viewModel.getData(index: indexPath.row) {
             cell.setup(model: data)
-        } else {
-            cell.reset()
         }
         
         cell.likeAction = { [weak self] in
@@ -105,9 +76,7 @@ extension ViewController: UICollectionViewDataSource {
         
         cell.dislikeAction = { [weak self] in
             guard let self = self else { return }
-
             viewModel.changeDislike(index: indexPath.row)
-
         }
         
         return cell
@@ -117,7 +86,10 @@ extension ViewController: UICollectionViewDataSource {
 extension ViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        playVideo(cell: cell, row: indexPath.row)
+        guard let cell = cell as? ShortVideoCell else {
+            return
+        }
+        cell.playVideo()
         
         if (viewModel.isLastData(index: indexPath.row)) {
             viewModel.loadData()
@@ -127,6 +99,16 @@ extension ViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         removeVideo(cell: cell, row: indexPath.row)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = shortVideoCollectionView.cellForItem(at: indexPath)
+
+        guard let cell = cell as? ShortVideoCell else {
+            return
+        }
+        
+        cell.playorPause()
     }
 }
 

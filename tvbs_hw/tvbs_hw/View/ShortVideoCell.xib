@@ -65,16 +65,25 @@
                         </button>
                     </subviews>
                 </stackView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tnc-Xw-1eq">
+                    <rect key="frame" x="166.66666666666666" y="396" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="hiT-l3-8SV"/>
+                        <constraint firstAttribute="height" constant="60" id="oz7-DJ-a70"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="Bbw-aT-rTD" secondAttribute="bottom" id="64W-ME-TM3"/>
+                <constraint firstItem="Tnc-Xw-1eq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="7K2-6b-ARd"/>
                 <constraint firstItem="Bbw-aT-rTD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="9mJ-AD-Qcc"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="PAP-ah-SQn" secondAttribute="trailing" constant="20" id="KOy-0o-9q0"/>
                 <constraint firstItem="Bbw-aT-rTD" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="P18-dJ-Zmn"/>
                 <constraint firstItem="Bbw-aT-rTD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VRg-0l-o3Z"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="PAP-ah-SQn" secondAttribute="bottom" constant="50" id="VzA-nM-1y6"/>
+                <constraint firstItem="Tnc-Xw-1eq" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="YU8-np-flE"/>
                 <constraint firstItem="Bbw-aT-rTD" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hql-dj-ZhT"/>
                 <constraint firstItem="Bbw-aT-rTD" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="wZt-HX-COc"/>
             </constraints>
@@ -82,6 +91,7 @@
                 <outlet property="disLikeButton" destination="IRf-L8-T2u" id="vo6-7X-roO"/>
                 <outlet property="likeButton" destination="NPy-bW-wdi" id="KD3-Fk-cqa"/>
                 <outlet property="likeCountLabel" destination="haS-DO-O81" id="BGN-bq-pUQ"/>
+                <outlet property="playPauseImageView" destination="Tnc-Xw-1eq" id="I5z-oz-DNT"/>
                 <outlet property="videoView" destination="Bbw-aT-rTD" id="Ob2-aS-rXA"/>
             </connections>
             <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
